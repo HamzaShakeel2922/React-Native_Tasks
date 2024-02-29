@@ -9,47 +9,7 @@ import {
 
 import {Dropdown} from 'react-native-element-dropdown';
 import {Formik} from 'formik';
-
-const genderData = [
-  {
-    label: 'Male',
-    value: 'Male',
-  },
-  {
-    label: 'Female',
-    value: 'Female',
-  },
-];
-const roleData = [
-  {
-    label: 'ASE',
-    value: 'ASE',
-  },
-  {
-    label: 'SE',
-    value: 'SE',
-  },
-];
-const profession = [
-  {
-    label: 'Software Developer',
-    value: 'Software Developer',
-  },
-  {
-    label: 'IT Professional',
-    value: 'IT Professional',
-  },
-];
-const address = [
-  {
-    label: 'Johar Town',
-    value: 'Johar Town',
-  },
-  {
-    label: 'Wapda Town',
-    value: 'Wapda Town',
-  },
-];
+import {genderData, roleData, profession, address} from '../utils/constants';
 
 const Form = () => {
   return (

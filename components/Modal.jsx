@@ -20,12 +20,20 @@ const ModalComponent = () => {
   const [parentName, setParentName] = useState('');
   const [date, setDate] = useState(new Date());
   const [isDatePickerVisible, setDatePickerVisible] = useState(false);
+
   const handleInputValue = phoneNumber => {
     setInputValue(phoneNumber);
   };
 
   const handleSelectedCountry = country => {
     setSelectedCountry(country);
+  };
+
+  const handleDateChange = (event, selectedDate) => {
+    if (event.type === 'set') {
+      setDate(selectedDate);
+    }
+    setDatePickerVisible(false);
   };
 
   const handleSend = () => {
@@ -125,10 +133,8 @@ const ModalComponent = () => {
               {isDatePickerVisible && (
                 <DateTimePicker
                   value={date}
-                  onChange={(e, newValue) => {
-                    setDate(newValue);
-                    setDatePickerVisible(false);
-                  }}
+                  negativeButton={{label: 'Cancel', textColor: 'red'}}
+                  onChange={handleDateChange}
                 />
               )}
             </View>

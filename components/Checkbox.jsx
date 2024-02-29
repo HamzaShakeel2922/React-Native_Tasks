@@ -1,31 +1,41 @@
-import {Text, View, SafeAreaView, StyleSheet} from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
+import {Text, View, StyleSheet} from 'react-native';
+import CustomCheckBox from './CustomCheckbox';
 
-const CustomCheckBox = props => {
+const CheckboxComponent = props => {
+  const {CheckboxesState, setCheckboxesState} = props;
   return (
-    <View style={styles.row}>
-      <CheckBox
-        value={props.isChecked}
-        onChange={() => {
-          const newState = props.CheckboxesState.map(item => {
-            if (item.id === props.id) {
-              return {...item, isSelected: !item.isSelected};
-            }
-            return item;
-          });
-          props.setCheckboxesState(newState);
-        }}
-      />
-      <Text>{props.title}</Text>
+    <View style={styles.cardContent}>
+      <Text style={styles.heading}>
+        2.How Would you rate your energy levels during today's training
+        session/game?
+      </Text>
+      <View style={styles.checkBoxContainer}>
+        {CheckboxesState.map(item => {
+          return (
+            <CustomCheckBox
+              key={item.id}
+              title={item.title}
+              setCheckboxesState={setCheckboxesState}
+              CheckboxesState={CheckboxesState}
+              name={item.name}
+              id={item.id}
+              isChecked={item.isSelected}
+            />
+          );
+        })}
+      </View>
     </View>
   );
 };
-
 const styles = StyleSheet.create({
-  row: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  cardContent: {
+    padding: 10,
+  },
+
+  heading: {
+    fontWeight: '500',
+    fontSize: 16,
   },
 });
 
-export default CustomCheckBox;
+export default CheckboxComponent;

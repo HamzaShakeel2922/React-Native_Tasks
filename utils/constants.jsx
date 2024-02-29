@@ -19,6 +19,47 @@ export const Listdata = [
   },
 ];
 
+export const genderData = [
+  {
+    label: 'Male',
+    value: 'Male',
+  },
+  {
+    label: 'Female',
+    value: 'Female',
+  },
+];
+export const roleData = [
+  {
+    label: 'ASE',
+    value: 'ASE',
+  },
+  {
+    label: 'SE',
+    value: 'SE',
+  },
+];
+export const profession = [
+  {
+    label: 'Software Developer',
+    value: 'Software Developer',
+  },
+  {
+    label: 'IT Professional',
+    value: 'IT Professional',
+  },
+];
+export const address = [
+  {
+    label: 'Johar Town',
+    value: 'Johar Town',
+  },
+  {
+    label: 'Wapda Town',
+    value: 'Wapda Town',
+  },
+];
+
 export const checkboxData = [
   {
     id: 1,

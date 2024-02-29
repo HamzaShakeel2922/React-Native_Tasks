@@ -13,9 +13,9 @@ const Stack = createNativeStackNavigator();
 
 const app = () => {
   return (
-    <List />
-    //<Form />
-    // <MoreOnForms />
+    // <List />
+    // <Form />
+    //  <MoreOnForms />
     // <NavigationContainer>
     //   <Stack.Navigator initialRouteName="products">
     //     <Stack.Screen name="Products" component={Products} />
@@ -23,7 +23,7 @@ const app = () => {
     //     {/* <Stack.Screen name="Contact" component={Contact} /> */}
     //   </Stack.Navigator>
     // </NavigationContainer>
-    // <ModalComponent />
+    <ModalComponent />
   );
 };
 

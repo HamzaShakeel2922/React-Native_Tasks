@@ -6,32 +6,14 @@ import {
   SafeAreaView,
   TextInput,
 } from 'react-native';
-
 import search from '../assets/search.png';
 import next from '../assets/next.png';
-
-const data = [
-  {
-    id: 1,
-    img: 'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/362188677/original/fa23b64231550556b9d3197dc960cb98dc19c228/make-a-very-high-quality-game-icon-thumbnails-and-gfx.png',
-    title: 'present_09.pdf',
-    size: '8.2MB',
-  },
-  {
-    id: 2,
-    img: 'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/362188677/original/fa23b64231550556b9d3197dc960cb98dc19c228/make-a-very-high-quality-game-icon-thumbnails-and-gfx.png',
-    title: 'tactick442.jpeg',
-    size: '2.9MB',
-  },
-  {
-    id: 3,
-    img: 'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/362188677/original/fa23b64231550556b9d3197dc960cb98dc19c228/make-a-very-high-quality-game-icon-thumbnails-and-gfx.png',
-    title: 'Youtube Link',
-    description: 'Atletico Madrid - Possession game',
-  },
-];
+import {Listdata} from '../utils/constants';
+import {useState} from 'react';
 
 const List = () => {
+  const [list, setList] = useState(Listdata);
+  const [input, setInput] = useState('');
   return (
     <SafeAreaView
       style={{
@@ -41,7 +23,15 @@ const List = () => {
       <View style={styles.mainDiv}>
         <View style={styles.sectionStyle}>
           <Image source={search} style={styles.imageStyle} />
-          <TextInput style={{flex: 1}} placeholder="Search" />
+          <TextInput
+            style={{flex: 1}}
+            placeholder="Search"
+            value={input}
+            onChangeText={newValue => {
+              setInput(newValue);
+              setList(Listdata.filter(item => item.title.includes(newValue)));
+            }}
+          />
         </View>
 
         <View
@@ -52,7 +42,8 @@ const List = () => {
             marginTop: 20,
             gap: 20,
           }}>
-          {data.map(item => {
+          {list.length === 0 && <Text>No Record.</Text>}
+          {list.map(item => {
             return (
               <View
                 key={item.id}

@@ -1,5 +1,6 @@
-import List from './components/List';
+// import {List} from './components';
 import Form from './components/Form';
+import List from './components/List';
 import MoreOnForms from './components/MoreOnForms';
 import Products from './components/Products';
 import About from './components/About';
@@ -12,7 +13,7 @@ const Stack = createNativeStackNavigator();
 
 const app = () => {
   return (
-    // <List />
+    <List />
     //<Form />
     // <MoreOnForms />
     // <NavigationContainer>
@@ -22,7 +23,7 @@ const app = () => {
     //     {/* <Stack.Screen name="Contact" component={Contact} /> */}
     //   </Stack.Navigator>
     // </NavigationContainer>
-    <ModalComponent />
+    // <ModalComponent />
   );
 };
 

@@ -16,6 +16,9 @@ import CustomButton from './src/components/CustomButton';
 const Stack = createNativeStackNavigator();
 import CustomHeader from './src/components/CustomHeader';
 import MainScreen from './src/screens/MainScreen';
+import Calender from './src/components/Calender';
+import Accordions from './src/screens/Accordions';
+import ColorfullModal from './src/screens/ColorfullModal';
 
 const app = () => {
   return (
@@ -42,6 +45,9 @@ const app = () => {
         />
         <Stack.Screen name="MoreOnModal" component={MoreOnModal} />
         <Stack.Screen name="CustomButton" component={CustomButton} />
+        <Stack.Screen name="Switch" component={Calender} />
+        <Stack.Screen name="Accordion" component={Accordions} />
+        <Stack.Screen name="ColorfullModal" component={ColorfullModal} />
       </Stack.Navigator>
     </NavigationContainer>
   );

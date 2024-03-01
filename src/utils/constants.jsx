@@ -139,3 +139,46 @@ export const ProductsData = [
     img: 'https://img.freepik.com/free-photo/image-blue-school-bag-white-background_125540-3456.jpg',
   },
 ];
+
+export const buttonsArray = [
+  {
+    id: 1,
+    title: 'List Task',
+    onPress: 'ListTask',
+  },
+  {
+    id: 2,
+    title: 'More On Forms',
+    onPress: 'MoreOnForms',
+  },
+  {
+    id: 3,
+    title: 'Modal',
+    onPress: 'Modal',
+  },
+  {
+    id: 4,
+    title: 'Header Task',
+    onPress: 'HeaderTask',
+  },
+  {
+    id: 5,
+    title: 'More On Modal',
+    onPress: 'MoreOnModal',
+  },
+  {
+    id: 6,
+    title: 'Switch',
+    onPress: 'Switch',
+  },
+  {
+    id: 7,
+    title: 'Accordion',
+    onPress: 'Accordion',
+  },
+  {
+    id: 8,
+    title: 'Colorfull Modal',
+    onPress: 'ColorfullModal',
+  },
+];

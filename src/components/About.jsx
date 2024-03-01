@@ -1,6 +1,6 @@
 import {Text, View, Button, Image} from 'react-native';
 import {ProductsData} from '../utils/constants';
-const Home = ({route, navigation}) => {
+const Home = ({route}) => {
   const {item} = route.params;
   return (
     <View
@@ -28,7 +28,6 @@ const Home = ({route, navigation}) => {
         <Text>Category:{item.category}</Text>
         <Text>Stock:{item.stock}</Text>
       </View>
-      <Button title="Go back" onPress={() => navigation.navigate('Products')} />
     </View>
   );
 };

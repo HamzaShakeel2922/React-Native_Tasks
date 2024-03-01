@@ -1,11 +1,13 @@
 import React from 'react';
 import {Text, View, TouchableOpacity, Platform, StyleSheet} from 'react-native';
 
-const CustomButton = () => {
+const CustomButton = ({title, onPress}) => {
   return (
-    <TouchableOpacity style={styles.wrapper}>
+    <TouchableOpacity
+      style={styles.wrapper}
+      onPress={onPress ? onPress : undefined}>
       <View style={styles.view}>
-        <Text style={styles.buttonText}>Button</Text>
+        <Text style={styles.buttonText}>{title ? title : 'Button'}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -20,10 +22,9 @@ const styles = StyleSheet.create({
       width: 2,
     },
     shadowRadius: 20,
-    width: 100,
     elevation: Platform.OS === 'android' ? 20 : 0,
     alignSelf: 'center',
-    marginVertical: 100,
+    minWidth: 150,
   },
   view: {
     padding: 20,

@@ -51,7 +51,11 @@ const ModalComponent = () => {
       <View>
         <Button title="Open Modal" onPress={() => toggleModal(!isModalOpen)} />
       </View>
-      <Modal visible={isModalOpen} transparent={true} animationType="slide">
+      <Modal
+        visible={isModalOpen}
+        transparent={true}
+        animationType="slide"
+        onRequestClose={() => toggleModal(false)}>
         <View
           style={{
             flex: 1,

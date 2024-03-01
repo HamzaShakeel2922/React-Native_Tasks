@@ -6,8 +6,8 @@ import {
   SafeAreaView,
   TextInput,
 } from 'react-native';
-import search from '../assets/search.png';
-import next from '../assets/next.png';
+import search from '../assets/images/search.png';
+import next from '../assets/images/next.png';
 import {Listdata} from '../utils/constants';
 import {useState} from 'react';
 

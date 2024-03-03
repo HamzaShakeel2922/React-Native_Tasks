@@ -181,4 +181,9 @@ export const buttonsArray = [
     title: 'Colorfull Modal',
     onPress: 'ColorfullModal',
   },
+  {
+    id: 9,
+    title: 'Full Screen Modal',
+    onPress: 'FullScreenModal',
+  },
 ];

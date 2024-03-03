@@ -19,6 +19,7 @@ import MainScreen from './src/screens/MainScreen';
 import Calender from './src/components/Calender';
 import Accordions from './src/screens/Accordions';
 import ColorfullModal from './src/screens/ColorfullModal';
+import FullScreenModal from './src/components/FullScreenModal';
 
 const app = () => {
   return (
@@ -48,6 +49,7 @@ const app = () => {
         <Stack.Screen name="Switch" component={Calender} />
         <Stack.Screen name="Accordion" component={Accordions} />
         <Stack.Screen name="ColorfullModal" component={ColorfullModal} />
+        <Stack.Screen name="FullScreenModal" component={FullScreenModal} />
       </Stack.Navigator>
     </NavigationContainer>
   );

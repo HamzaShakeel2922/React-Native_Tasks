@@ -67,6 +67,7 @@ const ColorfullModal = () => {
       <Modal
         onBackButtonPress={() => setShowModal(false)}
         isVisible={showModal}
+        animationIn="slideInUp"
         onBackdropPress={() => setShowModal(false)}
         style={{
           margin: 0,
@@ -74,21 +75,15 @@ const ColorfullModal = () => {
         }}>
         <View
           style={{
-            position: 'relative',
-            flex: 1,
+            position: 'absolute',
+            bottom: 0,
+            width: '100%',
           }}>
-          <View
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              width: '100%',
-            }}>
-            <FlatList
-              data={COLOR_DATA}
-              renderItem={({item}) => <Item {...item} />}
-              keyExtractor={item => item.id}
-            />
-          </View>
+          <FlatList
+            data={COLOR_DATA}
+            renderItem={({item}) => <Item {...item} />}
+            keyExtractor={item => item.id}
+          />
         </View>
       </Modal>
     </View>
